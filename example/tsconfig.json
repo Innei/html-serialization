@@ -2,6 +2,8 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
+    "target": "ESNext",
+    "module": "ESNext",
     "paths": {
       "~/*": [
         "../src/*"
