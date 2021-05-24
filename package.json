@@ -4,7 +4,7 @@
   "description": "",
   "author": "Innei",
   "license": "MIT",
-  "main": "build/index.cjs.js",
+  "main": "lib/index.js",
   "module": "esm/index.js",
   "types": "lib/index.d.ts",
   "typings": "lib/index.d.ts",
