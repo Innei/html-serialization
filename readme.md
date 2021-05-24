@@ -1,26 +1,17 @@
-# Rollup Typescript library template
+# HTML Serialization
 
-```sh
-pnpm i
-```
+测试库, XSS filter
 
-# Usage
+```ts
+const $app = document.getElementById('app')!
+const template = `<div><script>document.write('xss')</script></div><a href="javascript:;" ></a>`
+$app.innerHTML = template
 
-### Package
 
-```
-yarn package
-```
+$app.replaceWith(HTMLFilter($app, { skipTags: ['script'], encodeTags: [] }))
 
-### Dev
+console.log(HTMLDeserialization(template))
 
-```
-yarn dev
-```
 
-### Delopy
-
-```
-yarn delopy
-yarn publish
+console.log(HTMLStringFilter(template))
 ```
